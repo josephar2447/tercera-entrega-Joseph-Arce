@@ -1,0 +1,229 @@
+/* Importar Bootstrap */
+@import "scss/bootstrap.scss";
+
+/* Variables Personalizadas */
+$primary: #007bff;
+$text-light: #ffffff;
+$text-dark: #000000;
+$container-max-width: 1000px;
+
+/* Reset */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: $text-dark;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .menu {
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 1rem;
+
+                .nav-link {
+                    text-decoration: none;
+                    color: $text-dark;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+
+            .btn {
+                background-color: $primary;
+                color: $text-light;
+                padding: 0.5rem 1rem;
+                text-decoration: none;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: darken($primary, 10%);
+                }
+            }
+        }
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 3rem 0;
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+
+    .btn {
+        background-color: $primary;
+        color: $text-light;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: darken($primary, 10%);
+        }
+    }
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 2rem 0;
+
+    p {
+        margin-bottom: 1.5rem;
+    }
+
+    .btn {
+        background-color: $primary;
+        color: $text-light;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: darken($primary, 10%);
+        }
+    }
+}
+
+/* Features Section */
+.features {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 2rem 0;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+
+        span {
+            color: $primary;
+        }
+    }
+
+    .btn {
+        background-color: $primary;
+        color: $text-light;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: darken($primary, 10%);
+        }
+    }
+}
+
+/* Benefits Section */
+.benefits {
+    text-align: center;
+    padding: 2rem 0;
+
+    .row {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1.5rem;
+            text-align: left;
+            background-color: #ffffff;
+
+            h5 {
+                font-size: 1.25rem;
+                margin-bottom: 1rem;
+            }
+
+            ul {
+                padding-left: 1rem;
+                list-style-type: disc;
+            }
+        }
+    }
+
+    .btn {
+        background-color: $primary;
+        color: $text-light;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 2rem;
+
+        &:hover {
+            background-color: darken($primary, 10%);
+        }
+    }
+}
+
+/* Footer */
+footer {
+    background-color: $primary;
+    color: $text-light;
+    text-align: center;
+    padding: 1rem 0;
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0;
+
+        li {
+            a {
+                color: $text-light;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    p {
+        margin-top: 1rem;
+        font-size: 0.875rem;
+    }
+}
