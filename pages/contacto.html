@@ -1,83 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Conéctate con Nosotros</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estructura para mantener el footer al fondo */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        .custom-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .form-control, .form-select {
+            border-radius: 10px;
+        }
+        textarea {
+            resize: none;
+        }
+        .image-placeholder {
+            background-color: #e9ecef;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
 </head>
 <body>
+    <!-- Header con navbar aprobado -->
     <header>
-        <nav class="nav-hamburguesa">
-            <div class="logo-container logo">
-                <a href="../index.html" class="logo-aiead-nosotros">
-                    <img src="../assets/images/logo-aiead.png" alt="logo-aiead">
-                </a>
-            </div>
-            <input type="checkbox" id="toggle" class="toggle-checkbox">
-            <label for="toggle" class="hamburger-icon">
-                <i class="material-icons">menu</i>
-            </label>
-            <div class="menu">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../pages/nosotros.html">Nosotros</a></li>
-                    <li><a href="../pages/servicios.html">Servicios</a></li>
-                    <li><a href="../pages/faq.html">FAQ</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">Logo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/faq.html">FAQ</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-primary ms-3">Contacto</a>
+                </div>
             </div>
         </nav>
     </header>
+
+    <!-- Main Content -->
     <main>
-        <section class="contacto-section">
-            <div class="intro">
-                <h2>Conéctate con <span>Nosotros</span></h2>
-                <p>Estamos listos para ayudarte a transformar tu negocio con soluciones de IA que automatizan y optimizan tus operaciones.</p>
-            </div>
-            
-            <div class="formulario-container">
-                <div class="formulario-info">
-                    <h3>Estamos emocionados de conectarnos contigo</h3>
-                    <form class="contacto-form">
-                        <input type="text" placeholder="Nombre" required>
-                        <input type="text" placeholder="Apellido" required>
-                        <input type="email" placeholder="Correo Electrónico" required>
-                        <select required>
-                            <option value="" disabled selected>¿Cuál es su presupuesto para el proyecto? (USD)</option>
-                            <option value="1000-5000">$1,000 - $5,000</option>
-                            <option value="5000-10000">$5,000 - $10,000</option>
-                            <option value="10000+">$10,000+</option>
-                        </select>
-                        <textarea placeholder="¿Cómo podemos ayudarte?" rows="4" required></textarea>
-                        <button type="submit">Enviar Mensaje</button>
-                    </form>
-                </div>
-                <div class="formulario-imagen">
-                    <div class="imagen-placeholder"></div>
+        <!-- Contact Section -->
+        <section class="py-5">
+            <div class="custom-container">
+                <h2 class="fw-bold">Conéctate con <span class="text-primary">Nosotros</span></h2>
+                <div class="row mt-4">
+                    <!-- Formulario -->
+                    <div class="col-md-6">
+                        <h4 class="fw-bold">Estamos emocionados de conectarnos contigo</h4>
+                        <form class="mt-4">
+                            <div class="mb-3">
+                                <label for="name" class="visually-hidden">Nombre</label>
+                                <input type="text" class="form-control" id="name" placeholder="Nombre">
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastname" class="visually-hidden">Apellido</label>
+                                <input type="text" class="form-control" id="lastname" placeholder="Apellido">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="visually-hidden">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" placeholder="Correo Electrónico">
+                            </div>
+                            <div class="mb-3">
+                                <label for="budget" class="visually-hidden">Presupuesto</label>
+                                <select class="form-select" id="budget">
+                                    <option value="" selected>¿Cuál es su presupuesto para el proyecto? (USD)</option>
+                                    <option value="1000">Menos de $1,000</option>
+                                    <option value="5000">Entre $1,000 y $5,000</option>
+                                    <option value="10000">Más de $5,000</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="visually-hidden">Mensaje</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="¿Cómo podemos ayudarte?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                    <!-- Imagen Placeholder -->
+                    <div class="col-md-6">
+                        <div class="image-placeholder d-flex justify-content-center align-items-center">
+                            <p class="text-muted">Espacio para la imagen</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        
     </main>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="../assets/images/logo-aiead-negativo.png" alt="Logo AIEAD">
-            </div>
-            <div class="footer-links">
-                <ul>
-                    <li><a href="../pages/servicios.html">Servicios</a></li>
-                    <li><a href="#">Contáctanos</a></li>
-                    <li><a href="../pages/faq.html">FAQ</a></li>
-                </ul>
-            </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-light py-4">
+        <div class="custom-container text-center">
+            <p>&copy; 2024 AIEAD. Todos los derechos reservados.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#" class="text-light">Servicios</a></li>
+                <li class="list-inline-item"><a href="../pages/contacto.html" class="text-light">Contáctanos</a></li>
+                <li class="list-inline-item"><a href="../pages/faq.html" class="text-light">FAQ</a></li>
+            </ul>
         </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
